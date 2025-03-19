@@ -1,0 +1,56 @@
+create database TechCorp;
+USE TechCorp;
+
+/* Creación de la tabla */
+create table Empleado (
+    nombreEmpleado varchar(15) primary key,
+    edadEmpleado int NOT NULL,
+    salarioEmpleado int NOT NULL,
+    depEmpleado varchar(15) NOT NULL,
+    aniocontEmpleado int NOT NULL
+);
+
+describe Empleado;
+
+/* Inserción de datos */
+insert into Empleado (nombreEmpleado, edadEmpleado, salarioEmpleado, depEmpleado, aniocontEmpleado) values
+("Carlos", 40, 5000, "Ventas", 2018),  
+("Ana", 28, 3900, "Ventas", 2022),  
+("Camila", 31, 4100, "Finanzas", 2019),  
+("Alejandro", 26, 3700, "Ventas", 2023),  
+("Luis", 35, 4500, "IT", 2017),  
+("Elena", 32, 3200, "Ventas", 2023),  
+("Arturo", 45, 6000, "Gerencia", 2015),  
+("Sofía", 29, 3100, "Ventas", 2020),  
+("Cristian", 50, 7000, "Dirección", 2010),  
+("Valeria", 27, 2800, "Ventas", 2024);  
+
+/* Consulta general */
+select * from Empleado;
+
+/* Altos ingresos: ¿Quiénes son los empleados que ganan más de $4,000? */
+select * from Empleado where salarioEmpleado > 4000;
+
+/* Fuerza de ventas: Extrae la lista de empleados que trabajan en el departamento de Ventas */
+select * from Empleado where depEmpleado = "Ventas";
+
+/* Rango de edad: Encuentra a los empleados que tienen entre 30 y 40 años */
+select * from Empleado where edadEmpleado >= 30 and edadEmpleado <= 40;
+
+/* Nuevas contrataciones: ¿Quiénes han sido contratados después del año 2020? */
+select * from Empleado where aniocontEmpleado > 2020;
+
+/* Distribución de empleados: ¿Cuántos empleados hay en cada departamento? */
+select COUNT(depEmpleado) as total_empleados from Empleado group by depEmpleado;
+
+/* Análisis salarial: ¿Cuál es el salario promedio en la empresa? */
+select AVG(salarioEmpleado) as salario_promedio from Empleado;
+
+/* Nombres selectivos: Muestra los empleados cuyos nombres comienzan con "A" o "C" */
+select * from Empleado where nombreEmpleado like "A%" or nombreEmpleado like "C%"";
+
+/* Departamentos específicos: Encuentra a los empleados que no pertenecen al departamento de IT */
+select * from Empleado where depEmpleado <> "IT";
+
+/* El mejor pagado: ¿Quién es el empleado con el salario más alto? */
+select * from Empleado order by salarioEmpleado desc LIMIT 1;
