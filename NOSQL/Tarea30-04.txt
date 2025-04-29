@@ -1,0 +1,57 @@
+//Tarea
+use Tienda
+switched to db Tienda
+db.createCollection("Cliente")
+{ ok: 1 }
+db.createCollection("Ventas")
+{ ok: 1 }
+show collections
+Cliente
+productos
+Ventas
+db.Cliente.insertMany([{Nombre:"Andres",Documento:1077841124,CantidadCompra:3},
+{Nombre:"Alejandro",Documento:1576898774,CantidadCompra:6},
+{Nombre:"Laura",Documento:8795481799,CantidadCompra:4},
+{Nombre:"Isabella",Documento:9744857799,CantidadCompra:10},
+{Nombre:"Sofia",Documento:1044273258,CantidadCompra:20}])
+{
+  acknowledged: true,
+  insertedIds: {
+    '0': ObjectId('681124306955c25fc10796f9'),
+    '1': ObjectId('681124306955c25fc10796fa'),
+    '2': ObjectId('681124306955c25fc10796fb'),
+    '3': ObjectId('681124306955c25fc10796fc'),
+    '4': ObjectId('681124306955c25fc10796fd')
+  }
+}
+db.Ventas.insertMany([{idVenta:1,fechaVenta: new Date ("2025-05-25"),CantidadProducto:6,PrecioUnitario:60000,NombreProducto:"mouse"},
+{idVenta:2,FechaVenta:new Date ("2025-07-24"),CantidadProducto:2,PrecioUnitario:40000,NombreProducto:"teclado"},
+{Nombre:3,FechaVenta:new Date ("2025-08-10"),CantidadCompra:3,PrecioUnitario:10000,NombreProducto:"usb"},
+{Nombre:4,FechaVenta:new Date ("2025-01-27"),CantidadCompra:1,PrecioUnitario:10000,NombreProducto:"usb"},
+{Nombre:5,FechaVenta:new Date ("2025-01-25"),CantidadCompra:4,PrecioUnitario:40000,NombreProducto:"mouse"}])
+{
+  acknowledged: true,
+  insertedIds: {
+    '0': ObjectId('68112fc46955c25fc10796fe'),
+    '1': ObjectId('68112fc46955c25fc10796ff'),
+    '2': ObjectId('68112fc46955c25fc1079700'),
+    '3': ObjectId('68112fc46955c25fc1079701'),
+    '4': ObjectId('68112fc46955c25fc1079702')
+  }
+}
+db.Cliente.find({CantidadCompra:{$eq:6}}) // Encontrar cliente con cantidadCompra igual a 6
+db.Ventas.find({PrecioUnitario:{$gt:10000}}) // Encontrar venta con PrecioUnitario mayor a 10000
+db.Cliente.find({CantidadCompra: {$gte: 10}}) // Encontrar cliente con cantidadCompra mayor o igual a 10
+db.Ventas.find({CantidadProducto:{$lt:5}}) // Encontrar venta con CantidadProducto menor a 5
+db.Cliente.find({CantidadCompra:{$lte:4}}) // Encontrar cliente con cantidadCompra menor o igual a 4
+db.Cliente.find({Nombre:{$ne:"Alejandro"}}) // Encontrar cliente con nombre diferente a Alejandro
+db.Cliente.find({Nombre:{$in:["Laura","Sofia"]}}) // Encontrar cliente con nombre Laura o Sofia
+db.Ventas.find({NombreProducto:{$nin:["mouse","teclado"]}}) // Encontrar cliente sin productos Mouse y teclado
+db.Cliente.find({$or:[{Nombre:"Alejandro"},{CantidadCompra:10}]}) // Encontrar cliente que haya comprado 10 productos o se llame Alejandro 
+db.Ventas.find({$and: [{PrecioUnitario: {$gte: 40000}}, {CantidadProducto: {$lte: 4}}]}) // Encontrar ventas  que el precio mayor o igual a 40000 o lleve menos o igual a 4 productos
+db.Cliente.find({CantidadCompra: {$not: {$gt: 10}}}) // Encontrar venta en donde el precioUnitario no sea mayor a 10
+db.Cliente.find({$nor: [{Nombre: "Laura"}, {CantidadCompra: 6}]}) // Encontrar cliente que no se llame Laura ni que haya comprado 6
+db.Ventas.find({idVenta: {$exists: false}}) // Encontrar ventas los que no tienen idVenta
+db.Cliente.find({Documento: {$type: "number"}}) // le el tipo de dato al documento
+db.Cliente.find({CantidadCompra: {$mod: [2, 0]}}) // Encontrar cliente con cantidad de compra par"
+db.Cliente.find({Nombre: {$regex: "^A"}}) // Encontrar cliente con nombres que empiezan con "A"
