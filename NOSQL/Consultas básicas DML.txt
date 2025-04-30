@@ -1,0 +1,35 @@
+//Consultas básicas DML
+
+#find 
+
+db.Cliente.find() // General de una colección
+
+db.Cliente.find({CantidadCompra:{$eq:6}}) //Especififca
+
+
+#Update
+
+-one
+db.productos.updateOne({nombre:"laptop"},{$set:{precio:2000000}})
+
+-many
+db.productos.updateMany({precio:{$lt:1000000}},{$set:{enOferta:true}})
+
+#Delete
+
+-Documento
+db.Cliente.deleteOne({Documento:1576898774})
+
+-Propiedad
+db.Cliente.updateOne({Nombre:"pablo"},{$unset:{nombre:"pablo"}})
+
+-Colección
+db.prodcutos,drop()
+
+-basedata
+db.dropDatabase()
+
+
+nuevo documento de una colección 
+
+db.Cliente.updateOne({Nombre:"pablo"},{$unset:{nombre:"pablo"}})
