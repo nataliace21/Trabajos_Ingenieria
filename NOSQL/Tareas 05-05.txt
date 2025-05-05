@@ -1,0 +1,24 @@
+db.productos.insertMany([{idProducto:1,nombre:"Laptop",precio:12000,cantidad:4},
+{idProducto:2,nombre:"mouse",precio:60000,cantidad:15},
+{idProducto:3,nombre:"teclado",precio:40000,cantidad:30},
+{idProducto:4,nombre:"usb",precio:10000,cantidad:222},
+{idProducto:5,nombre:"cable",precio:10000,cantidad:1054}])                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     
+db.Cliente.insertMany([{idCliente:1, Nombre:"Andres",Documento:1077841124,CantidadCompra:3},
+{idCliente:2,Nombre:"Alejandro",Documento:1576898774,CantidadCompra:6},
+{idCliente:3,Nombre:"Laura",Documento:8795481799,CantidadCompra:4},
+{idCliente:4,Nombre:"Isabella",Documento:9744857799,CantidadCompra:10},
+{idCliente:5,Nombre:"Sofia",Documento:1044273258,CantidadCompra:20}])   
+
+db.ventas.insertMany([{idVenta: 1,idCliente: 1,idProducto: 2,cantidad: 2,fecha: new Date("2025-05-05")},
+{idVenta: 2,idCliente: 2,idProducto: 1,cantidad: 1,fecha: new Date("2025-05-04")},
+{idVenta: 3,idCliente: 4,idProducto: 4,cantidad: 10,fecha: new Date("2025-05-03")},
+{idVenta: 4,idCliente: 3,idProducto: 3,cantidad: 3,fecha: new Date("2025-05-02")},
+{idVenta: 5,idCliente: 5,idProducto: 5,cantidad:6,fecha:Date("2025-05-01")}])
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                             
+db.Ventas.aggregate([{$lookup: {
+      from: "Cliente",           // Colección destino
+      localField: "idCliente",   // Campo en ventas
+      foreignField: "idCliente", // Campo en Cliente
+      as: "cliente"              // Resultado se guarda aquí como array
+    }}])
+                                                                                                                                                                                                                                                                                         
