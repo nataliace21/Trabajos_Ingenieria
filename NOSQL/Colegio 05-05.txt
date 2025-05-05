@@ -1,0 +1,50 @@
+use Colegio      
+
+db.createCollection("Alumnos")      
+
+db.createCollection("Materia")    
+
+db.createCollection("Curso")
+          
+db.createCollection("Calificaciones")
+
+db.alumnos.insertMany([
+  {idAlumno:1,nombre: "Maria",edad:16,correo: "maria001@gmail.com" },
+  {idAlumno:2,nombre: "Santiago",edad:15,correo: "santiago02@gmail.com" },
+  {idAlumno:3,nombre: "Sabrina",edad:16,correo: "sabrina002@gmail.com" },
+  {idAlumno:4,nombre: "Juan",edad:16,correo: "Juannes@gmail.com" },
+  {idAlumno:5,nombre: "Sara",edad:17,correo: "saaara@gmail.com" },
+  {idAlumno:6,nombre: "Alejandro",edad:16,correo: "alejooo@gmail.com" },
+  {idAlumno:7,nombre: "Luisa",edad:16,correo: "luuuissaa@gmail.com" },
+  {idAlumno:8,nombre: "Esteban",edad:15,correo: "estebanx15@gmail.com" },
+  {idAlumno:9,nombre: "Isabella",edad:17,correo: "isa_bella@gmail.com" },
+  {idAlumno:10,nombre: "Tomas",edad:16,correo: "tomyy16@gmail.com" }
+])
+
+db.materia.insertMany([
+  {idMateria:1,nombre: "Matemáticas"},
+  {idMateria:2,nombre: "Castellano"},
+  {idMateria:3,nombre: "Programación"},
+  {idMateria:4,nombre: "Inglés"},
+  {idMateria:5,nombre: "Deportes"},
+  {idMateria:6,nombre: "Física" },
+  {idMateria:7,nombre: "Francés" },
+  {idMateria:8,nombre: "Química" },
+  {idMateria:9,nombre: "Biología" },
+  {idMateria:10,nombre: "Historia" }
+])
+
+db.curso.insertMany([
+  {idCurso:3, curso: "Once A" },
+  {idCurso:4, curso: "Once B" },
+  {idCurso:5, curso: "Once C" }
+])
+
+db.Calificaciones.insertMany([{idAlumno: 1, idMateria: 1, idCurso: 1,Calificacion:"Sobresaliente"},
+{idAlumno: 2, idMateria: 6, idCurso: 2,Calificacion:"Excelente"},
+{idAlumno: 3, idMateria: 2, idCurso: 1,Calificacion:"Bien"},
+{idAlumno: 4, idMateria: 3, idCurso: 2,Calificacion:"Deficiente"},
+{idAlumno: 5, idMateria: 5, idCurso: 1,Calificacion:"Excelente"},
+{idAlumno: 6, idMateria: 9, idCurso: 2,Calificacion:"Bien"},
+{idAlumno: 7, idMateria: 8, idCurso: 1,Calificacion:"Deficiente"}])
+                                                                                                                                                                                                        
