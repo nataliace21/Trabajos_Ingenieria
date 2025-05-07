@@ -1,0 +1,244 @@
+[{
+  "_id": {
+    "$oid": "681b7574578574d92426076c"
+  },
+  "idAlumno": 1,
+  "nombre": "Maria",
+  "edad": 16,
+  "correo": "maria001@gmail.com"
+},
+{
+  "_id": {
+    "$oid": "681b7574578574d92426076d"
+  },
+  "idAlumno": 2,
+  "nombre": "Santiago",
+  "edad": 15,
+  "correo": "santiago02@gmail.com"
+},
+{
+  "_id": {
+    "$oid": "681b7574578574d92426076e"
+  },
+  "idAlumno": 3,
+  "nombre": "Sabrina",
+  "edad": 16,
+  "correo": "sabrina002@gmail.com"
+},
+{
+  "_id": {
+    "$oid": "681b7574578574d92426076f"
+  },
+  "idAlumno": 4,
+  "nombre": "Juan",
+  "edad": 16,
+  "correo": "Juannes@gmail.com"
+},
+{
+  "_id": {
+    "$oid": "681b7574578574d924260770"
+  },
+  "idAlumno": 5,
+  "nombre": "Sara",
+  "edad": 17,
+  "correo": "saaara@gmail.com"
+},
+{
+  "_id": {
+    "$oid": "681b7574578574d924260771"
+  },
+  "idAlumno": 6,
+  "nombre": "Alejandro",
+  "edad": 16,
+  "correo": "alejooo@gmail.com"
+},
+{
+  "_id": {
+    "$oid": "681b7574578574d924260772"
+  },
+  "idAlumno": 7,
+  "nombre": "Luisa",
+  "edad": 16,
+  "correo": "luuuissaa@gmail.com"
+},
+{
+  "_id": {
+    "$oid": "681b7574578574d924260773"
+  },
+  "idAlumno": 8,
+  "nombre": "Esteban",
+  "edad": 15,
+  "correo": "estebanx15@gmail.com"
+},
+{
+  "_id": {
+    "$oid": "681b7574578574d924260774"
+  },
+  "idAlumno": 9,
+  "nombre": "Isabella",
+  "edad": 17,
+  "correo": "isa_bella@gmail.com"
+},
+{
+  "_id": {
+    "$oid": "681b7574578574d924260775"
+  },
+  "idAlumno": 10,
+  "nombre": "Tomas",
+  "edad": 16,
+  "correo": "tomyy16@gmail.com"
+}]
+[{
+  "_id": {
+    "$oid": "681b76db578574d924260779"
+  },
+  "idAlumno": 1,
+  "idMateria": 1,
+  "idCurso": 1,
+  "Calificacion": "Sobresaliente"
+},
+{
+  "_id": {
+    "$oid": "681b76db578574d92426077a"
+  },
+  "idAlumno": 2,
+  "idMateria": 6,
+  "idCurso": 2,
+  "Calificacion": "Excelente"
+},
+{
+  "_id": {
+    "$oid": "681b76db578574d92426077b"
+  },
+  "idAlumno": 3,
+  "idMateria": 2,
+  "idCurso": 1,
+  "Calificacion": "Bien"
+},
+{
+  "_id": {
+    "$oid": "681b76db578574d92426077c"
+  },
+  "idAlumno": 4,
+  "idMateria": 3,
+  "idCurso": 2,
+  "Calificacion": "Deficiente"
+},
+{
+  "_id": {
+    "$oid": "681b76db578574d92426077d"
+  },
+  "idAlumno": 5,
+  "idMateria": 5,
+  "idCurso": 1,
+  "Calificacion": "Excelente"
+},
+{
+  "_id": {
+    "$oid": "681b76db578574d92426077e"
+  },
+  "idAlumno": 6,
+  "idMateria": 9,
+  "idCurso": 2,
+  "Calificacion": "Bien"
+},
+{
+  "_id": {
+    "$oid": "681b76db578574d92426077f"
+  },
+  "idAlumno": 7,
+  "idMateria": 8,
+  "idCurso": 1,
+  "Calificacion": "Deficiente"
+}]
+[{
+  "_id": {
+    "$oid": "681b772c578574d924260788"
+  },
+  "idCurso": 3,
+  "curso": "OnceA"
+},
+{
+  "_id": {
+    "$oid": "681b772c578574d924260789"
+  },
+  "idCurso": 4,
+  "curso": "Onceb"
+},
+{
+  "_id": {
+    "$oid": "681b772c578574d92426078a"
+  },
+  "idCurso": 5,
+  "curso": "OnceC"
+}]
+[{
+  "_id": {
+    "$oid": "681b77d9578574d924260791"
+  },
+  "idMateria": 1,
+  "nombre": "Matematicas"
+},
+{
+  "_id": {
+    "$oid": "681b77d9578574d924260792"
+  },
+  "idMateria": 2,
+  "nombre": "Castellano"
+},
+{
+  "_id": {
+    "$oid": "681b77d9578574d924260793"
+  },
+  "idMateria": 3,
+  "nombre": "Programación"
+},
+{
+  "_id": {
+    "$oid": "681b77d9578574d924260794"
+  },
+  "idMateria": 4,
+  "nombre": "Inglés"
+},
+{
+  "_id": {
+    "$oid": "681b77d9578574d924260795"
+  },
+  "idMateria": 5,
+  "nombre": "Deportes"
+},
+{
+  "_id": {
+    "$oid": "681b77d9578574d924260796"
+  },
+  "idMateria": 6,
+  "nombre": "Fisica"
+},
+{
+  "_id": {
+    "$oid": "681b77d9578574d924260797"
+  },
+  "idMateria": 7,
+  "nombre": "Frances"
+},
+{
+  "_id": {
+    "$oid": "681b77d9578574d924260798"
+  },
+  "idMateria": 8,
+  "nombre": "Quimica"
+},
+{
+  "_id": {
+    "$oid": "681b77d9578574d924260799"
+  },
+  "idMateria": 9,
+  "nombre": "Biologia"
+},
+{
+  "_id": {
+    "$oid": "681b77d9578574d92426079a"
+  },
+  "idMateria": 10,
+  "nombre": "Historia"
+}]
