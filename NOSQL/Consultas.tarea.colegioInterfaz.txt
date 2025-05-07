@@ -1,0 +1,41 @@
+db.getCollection('Alumnos').find({
+  nombre: 'Santiago'
+});
+db.getCollection('Alumnos').find({ edad: 16 });
+
+db.getCollection('Alumnos').find({
+  correo: { $regex: 'isa', $options: 'i' }
+});
+
+
+db.getCollection('Calificaciones').find({
+  Calificacion: 'Deficiente'
+});
+
+db.getCollection('Calificaciones').find({
+  idAlumno: 3
+});
+
+db.getCollection('Calificaciones').find({
+  idCurso: 1
+});
+
+
+db.getCollection('Curso').find({
+  curso: 'OnceA'
+});
+db.getCollection('Curso').find({
+  curso: { $regex: '^Once' }
+});
+db.getCollection('Curso').find({ idCurso: 4 });
+
+
+db.getCollection('Materia').find({
+  nombre: 'Fisica'
+});
+db.getCollection('Materia').find({
+  nombre: { $regex: 'ia$' }
+});
+db.getCollection('Materia').find({
+  idMateria: 3
+});
